@@ -7,12 +7,39 @@
 //
 
 import UIKit
+import AVKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+       // Start the camera
+       let captureCamera = AVCaptureSession()
+        captureCamera.sessionPreset = .photo
+        
+        
+        guard let captureDevice = AVCaptureDevice.default(for: .video) else {
+            return
+        }
+        
+        guard let cameraInput = try? AVCaptureDeviceInput(device: captureDevice) else {
+            return
+        }
+        
+        captureCamera.addInput(cameraInput)
+        
+        
+        captureCamera.stopRunning()
+        
+        let previewLayer = AVCaptureVideoPreviewLayer(session: captureCamera)
+        
+        view.layer.addSublayer(previewLayer)
+        
+        previewLayer.frame = view.frame
+        
+        
     }
 
 

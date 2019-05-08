@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import Vision
 
 class ViewController: UIViewController {
 
@@ -30,15 +31,13 @@ class ViewController: UIViewController {
         
         captureCamera.addInput(cameraInput)
         
-        
-        captureCamera.stopRunning()
+        captureCamera.startRunning()
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureCamera)
         
         view.layer.addSublayer(previewLayer)
         
         previewLayer.frame = view.frame
-        
         
     }
 

@@ -10,7 +10,8 @@ import UIKit
 import AVKit
 import Vision
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate
+{
     
     override func viewDidLoad()
     {

@@ -16,7 +16,7 @@ func cameraOutput(_ output: AVCaptureOutput, checkOutput sampleBuffer: CMSampleB
     guard let pixelBuffer: CVPixelBuffer =
         CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
     
-    guard let mlModel = try? VNCoreMLModel(for: SqueezeNet().model) else { return }
+    guard let mlModel = try? VNCoreMLModel(for: Resnet50().model) else { return }
     
     
     let mlRequest = VNCoreMLRequest(model: mlModel)

@@ -10,14 +10,14 @@ import UIKit
 import AVKit
 import Vision
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-       // Start the camera
-       let captureCamera = AVCaptureSession()
+        // Start the camera
+        let captureCamera = AVCaptureSession()
         captureCamera.sessionPreset = .photo
         
         
@@ -36,11 +36,20 @@ class ViewController: UIViewController {
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureCamera)
         
         view.layer.addSublayer(previewLayer)
-        
+
         previewLayer.frame = view.frame
+
+        
+        let videoDataOutput = AVCaptureVideoDataOutput()
+        videoDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "Dispatch Queue"))
+        
+        captureCamera.addOutput(videoDataOutput)
+        
+    
         
     }
-
-
+    
+    
+    
 }
 

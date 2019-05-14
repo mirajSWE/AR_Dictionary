@@ -15,6 +15,8 @@
 		7C943A1022836F1F006C5483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C943A0E22836F1F006C5483 /* LaunchScreen.storyboard */; };
 		7C943A1B22836F1F006C5483 /* AR_DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C943A1A22836F1F006C5483 /* AR_DictionaryTests.swift */; };
 		7C943A2622836F1F006C5483 /* AR_DictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C943A2522836F1F006C5483 /* AR_DictionaryUITests.swift */; };
+		7CC08A54228A5C17009E77ED /* cameraOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08A53228A5C17009E77ED /* cameraOutput.swift */; };
+		7CC08A58228A5F12009E77ED /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08A57228A5F12009E77ED /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7C943A2122836F1F006C5483 /* AR_DictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AR_DictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C943A2522836F1F006C5483 /* AR_DictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_DictionaryUITests.swift; sourceTree = "<group>"; };
 		7C943A2722836F1F006C5483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CC08A53228A5C17009E77ED /* cameraOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraOutput.swift; sourceTree = "<group>"; };
+		7CC08A57228A5F12009E77ED /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,10 @@
 		7C943A0122836F1E006C5483 /* AR_Dictionary */ = {
 			isa = PBXGroup;
 			children = (
+				7CC08A57228A5F12009E77ED /* SqueezeNet.mlmodel */,
 				7C943A0222836F1E006C5483 /* AppDelegate.swift */,
 				7C943A0422836F1E006C5483 /* ViewController.swift */,
+				7CC08A53228A5C17009E77ED /* cameraOutput.swift */,
 				7C943A0622836F1E006C5483 /* Main.storyboard */,
 				7C943A0C22836F1F006C5483 /* Assets.xcassets */,
 				7C943A0E22836F1F006C5483 /* LaunchScreen.storyboard */,
@@ -261,7 +267,9 @@
 			files = (
 				7C943A0522836F1E006C5483 /* ViewController.swift in Sources */,
 				7C943A0322836F1E006C5483 /* AppDelegate.swift in Sources */,
+				7CC08A58228A5F12009E77ED /* SqueezeNet.mlmodel in Sources */,
 				7C943A0B22836F1E006C5483 /* AR_Dictionary.xcdatamodeld in Sources */,
+				7CC08A54228A5C17009E77ED /* cameraOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				INFOPLIST_FILE = AR_Dictionary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				INFOPLIST_FILE = AR_Dictionary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C71800A228B875F00B5BD2E /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C718009228B875F00B5BD2E /* Resnet50.mlmodel */; };
 		7C943A0322836F1E006C5483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C943A0222836F1E006C5483 /* AppDelegate.swift */; };
 		7C943A0522836F1E006C5483 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C943A0422836F1E006C5483 /* ViewController.swift */; };
 		7C943A0822836F1E006C5483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C943A0622836F1E006C5483 /* Main.storyboard */; };
@@ -15,8 +16,6 @@
 		7C943A1022836F1F006C5483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C943A0E22836F1F006C5483 /* LaunchScreen.storyboard */; };
 		7C943A1B22836F1F006C5483 /* AR_DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C943A1A22836F1F006C5483 /* AR_DictionaryTests.swift */; };
 		7C943A2622836F1F006C5483 /* AR_DictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C943A2522836F1F006C5483 /* AR_DictionaryUITests.swift */; };
-		7CC08A54228A5C17009E77ED /* cameraOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08A53228A5C17009E77ED /* cameraOutput.swift */; };
-		7CC08A5A228A60A9009E77ED /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7CC08A59228A60A9009E77ED /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C718009228B875F00B5BD2E /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		7C9439FF22836F1E006C5483 /* AR_Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C943A0222836F1E006C5483 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C943A0422836F1E006C5483 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,8 +51,6 @@
 		7C943A2122836F1F006C5483 /* AR_DictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AR_DictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C943A2522836F1F006C5483 /* AR_DictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR_DictionaryUITests.swift; sourceTree = "<group>"; };
 		7C943A2722836F1F006C5483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7CC08A53228A5C17009E77ED /* cameraOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraOutput.swift; sourceTree = "<group>"; };
-		7CC08A59228A60A9009E77ED /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +101,9 @@
 		7C943A0122836F1E006C5483 /* AR_Dictionary */ = {
 			isa = PBXGroup;
 			children = (
-				7CC08A59228A60A9009E77ED /* Resnet50.mlmodel */,
+				7C718009228B875F00B5BD2E /* Resnet50.mlmodel */,
 				7C943A0222836F1E006C5483 /* AppDelegate.swift */,
 				7C943A0422836F1E006C5483 /* ViewController.swift */,
-				7CC08A53228A5C17009E77ED /* cameraOutput.swift */,
 				7C943A0622836F1E006C5483 /* Main.storyboard */,
 				7C943A0C22836F1F006C5483 /* Assets.xcassets */,
 				7C943A0E22836F1F006C5483 /* LaunchScreen.storyboard */,
@@ -267,9 +264,8 @@
 			files = (
 				7C943A0522836F1E006C5483 /* ViewController.swift in Sources */,
 				7C943A0322836F1E006C5483 /* AppDelegate.swift in Sources */,
+				7C71800A228B875F00B5BD2E /* Resnet50.mlmodel in Sources */,
 				7C943A0B22836F1E006C5483 /* AR_Dictionary.xcdatamodeld in Sources */,
-				7CC08A5A228A60A9009E77ED /* Resnet50.mlmodel in Sources */,
-				7CC08A54228A5C17009E77ED /* cameraOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,8 +440,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AR_Dictionary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +451,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mirajbrahmbhatt.AR-Dictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,8 +461,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AR_Dictionary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -471,6 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mirajbrahmbhatt.AR-Dictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
